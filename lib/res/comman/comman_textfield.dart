@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class CommanTextField extends StatelessWidget {
   final String? hintText;
   final Decoration? decoration;
@@ -11,17 +10,18 @@ class CommanTextField extends StatelessWidget {
   final FontWeight? fontWeight;
   final String? labetlText;
   final Color? labelcolor;
-  const CommanTextField(
-      {super.key,
-      this.hintText,
-      this.decoration,
-      this.prefixicon,
-      this.suffixicon,
-      this.weight,
-      this.color,
-      this.fontWeight,
-      this.labetlText,
-      this.labelcolor, });
+  const CommanTextField({
+    super.key,
+    this.hintText,
+    this.decoration,
+    this.prefixicon,
+    this.suffixicon,
+    this.weight,
+    this.color,
+    this.fontWeight,
+    this.labetlText,
+    this.labelcolor,
+  });
 
   @override
   Widget build(BuildContext context) {
