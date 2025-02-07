@@ -26,12 +26,12 @@ class _ST4ScreenState extends State<ST4Screen> {
   }
 
   void _incrementProgress() {
-    if (_progress <= 100) {
+    if (_progress < 100) {
       setState(() {
         _progress += 1;
       });
 
-      if (_progress <= 100) {
+      if (_progress < 100) {
         Future.delayed(const Duration(milliseconds: 100), () {
           _incrementProgress();
         });

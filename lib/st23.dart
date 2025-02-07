@@ -237,12 +237,12 @@ class _ST23ScreenState extends State<ST23Screen> {
                                             Icons.star,
                                             color: Color(0xffE59E0B),
                                           ),
-                                         CommanText(
+                                          CommanText(
                                             text: text3[index],
                                             weight: 14,
                                             fontWeight: FontWeight.w400,
                                             color: AppColor.darkgrey,
-                                          ), 
+                                          ),
                                           SizedBox(
                                             width: 28,
                                           ),

@@ -12,8 +12,11 @@ class ST9Screen extends StatefulWidget {
 }
 
 class _ST9ScreenState extends State<ST9Screen> {
+
+
   @override
   Widget build(BuildContext context) {
+    print("12312313131");
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -43,7 +46,7 @@ class _ST9ScreenState extends State<ST9Screen> {
                     height: 0.013 * height,
                   ),
                   CommanText(
-                    text: '    Password sent to \n*****221b@gmail.com',
+                    text: 'Password sent to \n*****221b@gmail.com',
                     weight: 0.027 * height,
                     fontWeight: FontWeight.w500,
                     color: AppColor.blackcolor,
@@ -59,11 +62,13 @@ class _ST9ScreenState extends State<ST9Screen> {
                   ),
                   Row(
                     children: [
-                      CommanText(
-                        text: '                      password below!',
-                        weight: 0.016 * height,
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xff5E6A7B),
+                      Center(
+                        child: CommanText(
+                          text: 'password below!',
+                          weight: 0.016 * height,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff5E6A7B),
+                        ),
                       ),
                       SizedBox(
                         height: 0.020 * height,
