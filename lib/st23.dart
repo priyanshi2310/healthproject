@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:healthproject/res/comman/comman_text.dart';
 import 'package:healthproject/res/constant/app_color.dart';
 import 'package:healthproject/res/constant/app_images.dart';
-import 'package:healthproject/st24.dart';
+import 'package:healthproject/st.dart';
+// import 'package:healthproject/st24.dart';
 
 class ST23Screen extends StatefulWidget {
   const ST23Screen({super.key});
@@ -16,7 +17,7 @@ class _ST23ScreenState extends State<ST23Screen> {
   void initState() {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const ST24Screen()));
+          context, MaterialPageRoute(builder: (context) => STScreen()));
     });
     super.initState();
   }

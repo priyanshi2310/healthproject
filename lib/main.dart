@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthproject/st.dart';
 import 'package:healthproject/st1.dart';
 import 'package:healthproject/st10.dart';
 import 'package:healthproject/st11.dart';
@@ -13,8 +14,7 @@ import 'package:healthproject/st21.dart';
 import 'package:healthproject/st22.dart';
 import 'package:healthproject/st23.dart';
 import 'package:healthproject/st24.dart';
-
-
+// import 'package:healthproject/st24.dart';
 import 'package:healthproject/st3.dart';
 import 'package:healthproject/st4.dart';
 import 'package:healthproject/st5.dart';
@@ -62,6 +62,7 @@ class MyApp extends StatelessWidget {
         'ST21Screen': (context) => ST22Screen(),
         'ST23Screen': (context) => ST23Screen(),
         'ST24Screen':(context)=>ST24Screen(),
+        'STScreen':(context)=>STScreen(),
       },
     );
   }
