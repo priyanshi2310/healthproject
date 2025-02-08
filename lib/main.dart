@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:healthproject/st.dart';
-import 'package:healthproject/st1.dart';
-import 'package:healthproject/st10.dart';
-import 'package:healthproject/st11.dart';
-import 'package:healthproject/st12.dart';
-import 'package:healthproject/st13.dart';
-import 'package:healthproject/st14.dart';
-import 'package:healthproject/st15.dart';
-import 'package:healthproject/st18.dart';
-import 'package:healthproject/st2.dart';
-import 'package:healthproject/st20.dart';
-import 'package:healthproject/st21.dart';
-import 'package:healthproject/st22.dart';
-import 'package:healthproject/st23.dart';
-import 'package:healthproject/st24.dart';
+import 'package:healthproject/view/st13/st_13_screen.dart';
+import 'package:healthproject/view/st24/st_screen.dart';
+import 'package:healthproject/view/st1/st_1_screen.dart';
+import 'package:healthproject/view/st10/st_10_screen.dart';
+import 'package:healthproject/view/st11/st_11_screen.dart';
+import 'package:healthproject/view/st12/st_12_screen.dart';
+// import 'package:healthproject/view/st13/st13.dart';
+import 'package:healthproject/view/st14/st_14_screen.dart';
+import 'package:healthproject/view/st15/st_15_screen.dart';
+import 'package:healthproject/view/st18/st_18_screen.dart';
+import 'package:healthproject/view/st2/st_2_screen.dart';
+import 'package:healthproject/view/st20/st_20_screen.dart';
+import 'package:healthproject/view/st21/st_21_screen.dart';
+import 'package:healthproject/view/st22/st_22_screen.dart';
+import 'package:healthproject/view/st23/st_23_screen.dart';
+import 'package:healthproject/view/st24/st_24_screen.dart';
 
 // import 'package:healthproject/st24.dart';
-import 'package:healthproject/st3.dart';
-import 'package:healthproject/st4.dart';
-import 'package:healthproject/st5.dart';
-import 'package:healthproject/st6.dart';
-import 'package:healthproject/st7.dart';
-import 'package:healthproject/st8.dart';
-import 'package:healthproject/st9.dart';
+import 'package:healthproject/view/st3/st_3_screen.dart';
+import 'package:healthproject/view/st4/st_4_screen.dart';
+import 'package:healthproject/view/st5/st_5_screen.dart';
+import 'package:healthproject/view/st6/st_6_screen.dart';
+import 'package:healthproject/view/st7/st_7_screen.dart';
+import 'package:healthproject/view/st8/st_8_screen.dart';
+import 'package:healthproject/view/st9/st_9_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -63,7 +64,7 @@ class MyApp extends StatelessWidget {
         'ST21Screen': (context) => ST22Screen(),
         'ST23Screen': (context) => ST23Screen(),
         'STScreen': (context) => STScreen(),
-        'ST24Screen':(context)=>ST24Screen(),
+        'ST24Screen': (context) => ST24Screen(),
       },
     );
   }

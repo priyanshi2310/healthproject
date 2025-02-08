@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:healthproject/res/comman/comman_text.dart';
 import 'package:healthproject/res/constant/app_color.dart';
 import 'package:healthproject/res/constant/app_images.dart';
-import 'package:healthproject/st3.dart';
+import 'package:healthproject/view/st3/st_3_screen.dart';
 import 'package:simple_progress_indicators/simple_progress_indicators.dart';
 
 class ST2Screen extends StatefulWidget {

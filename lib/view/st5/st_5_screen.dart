@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:healthproject/st6.dart';
+import 'package:healthproject/view/st6/st_6_screen.dart';
 // import 'package:health_drug/view/st6/st6_screen.dart';
 
 class ST5Screen extends StatefulWidget {

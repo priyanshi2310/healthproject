@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // import 'package:health_drug/res/constant/app_color.dart';
 import 'package:healthproject/res/comman/comman_text.dart';
 import 'package:healthproject/res/constant/app_color.dart';
-import 'package:healthproject/st20.dart';
+import 'package:healthproject/view/st20/st_20_screen.dart';
 
 class ST19Screen extends StatefulWidget {
   const ST19Screen({super.key});

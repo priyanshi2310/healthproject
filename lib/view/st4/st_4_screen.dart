@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:healthproject/res/constant/app_images.dart';
-import 'package:healthproject/st5.dart';
+import 'package:healthproject/view/st5/st_5_screen.dart';
 
 class ST4Screen extends StatefulWidget {
   const ST4Screen({super.key});

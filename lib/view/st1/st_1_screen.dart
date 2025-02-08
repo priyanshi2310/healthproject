@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:healthproject/res/comman/comman_text.dart';
-import 'package:healthproject/st2.dart';
+import 'package:healthproject/view/st2/st_2_screen.dart';
 
 class ST1Screen extends StatefulWidget {
   const ST1Screen({super.key});
