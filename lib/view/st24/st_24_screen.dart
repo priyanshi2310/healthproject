@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:healthproject/res/comman/comman_text.dart';
 import 'package:healthproject/res/constant/app_color.dart';
+import 'package:healthproject/view/st25/st_25_screen.dart';
 
 class ST24Screen extends StatefulWidget {
   const ST24Screen({super.key});
@@ -50,6 +51,10 @@ class _ST24ScreenState extends State<ST24Screen> {
 
   @override
   void initState() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => ST25Screen()));
+    });
     super.initState();
 
     filteredText2 = text2;

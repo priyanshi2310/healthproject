@@ -14,8 +14,6 @@ class AppColor {
 
   static Color purple = const Color(0xff1E293A);
   static Color grey = const Color(0xffF1F5F9);
- 
+
   static Color white1 = const Color(0xffF1F5F9);
-
-
 }
