@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:healthproject/res/comman/comman_text.dart';
 import 'package:healthproject/res/constant/app_color.dart';
-import 'package:rating_summary/rating_summary.dart';
+import 'package:healthproject/view/st28/st_28_screen.dart';
+
+// import 'package:rating_summary/rating_summary.dart';
 
 class ST25Screen extends StatefulWidget {
   const ST25Screen({super.key});
-  
 
   @override
   State<ST25Screen> createState() => _ST25ScreenState();
@@ -13,6 +14,25 @@ class ST25Screen extends StatefulWidget {
 
 class _ST25ScreenState extends State<ST25Screen> {
   int selectcolor = 0;
+
+  List<String> text = ['FR', 'WH', 'DG', 'AI', 'AB'];
+  List<String> text1 = ['Frahan Rakhel', 'Whitney', 'Dean', 'Alis', 'Aabid'];
+  List<String> text2 = ['8d ago', '10d ago', '11d ago', '15d ago', '20d ago'];
+  List<String> text3 = [
+    'Doctor on Demand is a telemedicine service\nthat provides care on-demand and by \nappointment, for various physical and mental.',
+    'Talkspace is an online therapy platform \nthat gives users access to licensed \ntherapists and psychiatrists from..',
+    'Teladoc is an on-demand telehealth \nservice that connects patients with \nvirtual care for non-life-threatening',
+    'he Healow app is designed to give \nusers immediate access to consolidated \nhealthcare records from participating',
+    'Based on the popular website,the WebMD\ngives users access to information and\nresources,including a Symptom Checker..',
+  ];
+  @override
+  void initState() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => ST28Screen()));
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -587,34 +607,409 @@ class _ST25ScreenState extends State<ST25Screen> {
                                     ],
                                   ),
                                 ),
-                                Spacer(),
-                                RatingSummary(
-                                  counter: 13,
-                                  average: 3.846,
-                                  counterFiveStars: 5,
-                                  counterFourStars: 4,
-                                  counterThreeStars: 2,
-                                  counterTwoStars: 1,
-                                  counterOneStars: 1,
-                                ),
+                                // Spacer(),
+                                // RatingSummary(
+                                //   counter: 13,
+                                //   average: 3.846,
+                                //   counterFiveStars: 5,
+                                //   counterFourStars: 4,
+                                //   counterThreeStars: 2,
+                                //   counterTwoStars: 1,
+                                //   counterOneStars: 1,
+                                // ),
                               ],
                             ),
                           ),
+                          SizedBox(
+                            height: 43,
+                          ),
+                          Row(
+                            children: [
+                              CommanText(
+                                text: 'All Reviews',
+                                weight: 14,
+                                fontWeight: FontWeight.w500,
+                                color: AppColor.purple,
+                              ),
+                              Spacer(),
+                              Icon(
+                                Icons.calendar_month_outlined,
+                                color: AppColor.greencolor,
+                                size: 15,
+                              ),
+                              CommanText(
+                                text: ' Newest',
+                                weight: 14,
+                                fontWeight: FontWeight.w400,
+                                color: AppColor.purple,
+                              ),
+                              Icon(
+                                Icons.keyboard_arrow_down_rounded,
+                                color: AppColor.greencolor,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 9,
+                          ),
+                          SizedBox(
+                            height: 400,
+                            child: ListView.builder(
+                                itemCount: text.length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return Container(
+                                    padding: EdgeInsets.all(8),
+                                    margin: EdgeInsets.all(10),
+                                    height: 115,
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(15),
+                                      color: AppColor.grey,
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 54,
+                                          width: 54,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: AppColor.white,
+                                          ),
+                                          child: Center(
+                                            child: CommanText(
+                                              text: text[index],
+                                              weight: 20,
+                                              fontWeight: FontWeight.bold,
+                                              color: AppColor.blackcolor,
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 13,
+                                        ),
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            CommanText(
+                                              text: text1[index],
+                                              weight: 16,
+                                              fontWeight: FontWeight.w500,
+                                              color: AppColor.purple,
+                                            ),
+                                            Row(
+                                              children: [
+                                                CommanText(
+                                                  text: text2[index],
+                                                  weight: 14,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: AppColor.darkgrey,
+                                                ),
+                                                SizedBox(
+                                                  width: 16,
+                                                ),
+                                                CommanText(
+                                                  text: 'Verified',
+                                                  weight: 14,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: AppColor.darkgrey,
+                                                ),
+                                              ],
+                                            ),
+                                            CommanText(
+                                              text: text3[index],
+                                              weight: 11,
+                                              fontWeight: FontWeight.w400,
+                                              color: AppColor.darkgrey,
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                }),
+                          )
                         ],
                       ),
                     ),
                     SingleChildScrollView(
                       child: Column(
                         children: [
-                          CommanText(
-                            text: 'FAQ content will go here.',
-                            weight: 16,
-                            fontWeight: FontWeight.w400,
-                            color: AppColor.purple,
+                          InkWell(
+                            onTap: () {
+                              setState(() {
+                                selectcolor = 0;
+                              });
+                            },
+                            child: Card(
+                              color: AppColor.grey,
+                              margin: EdgeInsets.all(10),
+                              child: ExpansionTile(
+                                title: CommanText(
+                                  text:
+                                      'How can I place an order for my prescription medications?',
+                                  weight: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: selectcolor == 0
+                                      ? AppColor.white
+                                      : AppColor.purple,
+                                ),
+                                trailing: Container(
+                                  height: 22,
+                                  width: 22,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    color: AppColor.primaryColor,
+                                  ),
+                                  child:
+                                      Icon(Icons.keyboard_arrow_down_rounded),
+                                ),
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      'To place an order for your prescription medications, you can follow these steps: ...', // Your answer text here
+                                      style: TextStyle(
+                                        color: selectcolor == 0
+                                            ? AppColor.primaryColor
+                                            : Color(0xff1E293A),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              setState(() {
+                                selectcolor = 1;
+                              });
+                            },
+                            child: Card(
+                              color: AppColor.grey,
+                              margin: EdgeInsets.all(10),
+                              child: ExpansionTile(
+                                title: CommanText(
+                                  text: 'Do you accept insurance?',
+                                  weight: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: selectcolor == 1
+                                      ? AppColor.primaryColor
+                                      : Color(0xff1E293A),
+                                ),
+                                trailing: Container(
+                                  height: 22,
+                                  width: 22,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    color: AppColor.primaryColor,
+                                  ),
+                                  child:
+                                      Icon(Icons.keyboard_arrow_down_rounded),
+                                ),
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      'Yes, I have insurance, During theCharacter you’ll have the options.',
+                                      style: TextStyle(
+                                        color: selectcolor == 1
+                                            ? AppColor.primaryColor
+                                            : Color(0xff1E293A),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Card(
+                            color: AppColor.grey,
+                            margin: EdgeInsets.all(10),
+                            child: ExpansionTile(
+                              title: CommanText(
+                                text: 'What payment methods do you accept?',
+                                weight: 16,
+                                fontWeight: FontWeight.w500,
+                                color: selectcolor == 2
+                                    ? AppColor.primaryColor
+                                    : Color(0xff1E293A),
+                              ),
+                              trailing: Container(
+                                height: 22,
+                                width: 22,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: AppColor.primaryColor,
+                                ),
+                                child: Icon(Icons.keyboard_arrow_down_rounded),
+                              ),
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Yes, we accept multiple payment methods including credit cards.',
+                                    style: TextStyle(
+                                      color: selectcolor == 2
+                                          ? AppColor.primaryColor
+                                          : Color(0xff1E293A),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Card(
+                            color: AppColor.grey,
+                            margin: EdgeInsets.all(10),
+                            child: ExpansionTile(
+                              title: CommanText(
+                                text: 'Can I refill my prescriptions online?',
+                                weight: 16,
+                                fontWeight: FontWeight.w500,
+                                color: selectcolor == 3
+                                    ? AppColor.primaryColor
+                                    : Color(0xff1E293A),
+                              ),
+                              trailing: Container(
+                                height: 22,
+                                width: 22,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: AppColor.primaryColor,
+                                ),
+                                child: Icon(Icons.keyboard_arrow_down_rounded),
+                              ),
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Yes, you can refill your prescriptions online through our website.',
+                                    style: TextStyle(
+                                      color: selectcolor == 3
+                                          ? AppColor.primaryColor
+                                          : Color(0xff1E293A),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Card(
+                            color: AppColor.grey,
+                            margin: EdgeInsets.all(10),
+                            child: ExpansionTile(
+                              title: CommanText(
+                                text:
+                                    'How long will the prescription order take to process?',
+                                weight: 16,
+                                fontWeight: FontWeight.w500,
+                                color: selectcolor == 4
+                                    ? AppColor.primaryColor
+                                    : Color(0xff1E293A),
+                              ),
+                              trailing: Container(
+                                height: 22,
+                                width: 22,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: AppColor.primaryColor,
+                                ),
+                                child: Icon(Icons.keyboard_arrow_down_rounded),
+                              ),
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Orders are usually processed within 1-2 business days.',
+                                    style: TextStyle(
+                                      color: selectcolor == 4
+                                          ? AppColor.primaryColor
+                                          : Color(0xff1E293A),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Card(
+                            color: AppColor.grey,
+                            margin: EdgeInsets.all(10),
+                            child: ExpansionTile(
+                              title: CommanText(
+                                text:
+                                    'Do you offer prescription delivery services?',
+                                weight: 16,
+                                fontWeight: FontWeight.w500,
+                                color: selectcolor == 5
+                                    ? AppColor.primaryColor
+                                    : Color(0xff1E293A),
+                              ),
+                              trailing: Container(
+                                height: 22,
+                                width: 22,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: AppColor.primaryColor,
+                                ),
+                                child: Icon(Icons.keyboard_arrow_down_rounded),
+                              ),
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Yes, we offer delivery services within certain locations.',
+                                    style: TextStyle(
+                                      color: selectcolor == 5
+                                          ? AppColor.primaryColor
+                                          : Color(0xff1E293A),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Card(
+                            color: AppColor.grey,
+                            margin: EdgeInsets.all(10),
+                            child: ExpansionTile(
+                              title: CommanText(
+                                text:
+                                    'Can I return or exchange medicines that I’ve purchased?',
+                                weight: 16,
+                                fontWeight: FontWeight.w500,
+                                color: selectcolor == 6
+                                    ? AppColor.primaryColor
+                                    : Color(0xff1E293A),
+                              ),
+                              trailing: Container(
+                                height: 22,
+                                width: 22,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: AppColor.primaryColor,
+                                ),
+                                child: Icon(Icons.keyboard_arrow_down_rounded),
+                              ),
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'No, medicines purchased cannot be returned or exchanged.',
+                                    style: TextStyle(
+                                      color: selectcolor == 6
+                                          ? AppColor.primaryColor
+                                          : Color(0xff1E293A),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
-                    ),
+                    )
                   ],
                 ),
               ),
