@@ -3,7 +3,7 @@ import 'package:healthproject/res/comman/comman_text.dart';
 import 'package:healthproject/res/constant/app_color.dart';
 import 'package:healthproject/view/st28/st_28_screen.dart';
 
-// import 'package:rating_summary/rating_summary.dart';
+
 
 class ST25Screen extends StatefulWidget {
   const ST25Screen({super.key});

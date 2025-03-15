@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
-// import 'package:health_drug/res/comman/comman_text.dart';
-// import 'package:health_drug/res/comman/comman_textfield.dart';
-// import 'package:health_drug/res/constant/app_color.dart';
 import 'package:healthproject/res/comman/comman_text.dart';
 import 'package:healthproject/res/comman/comman_textfield.dart';
 import 'package:healthproject/res/constant/app_color.dart';
 import 'package:riff_switch/riff_switch.dart';
 
-// import 'package:syncfusion_flutter_sliders/sliders.dart';
+
 
 class ST12Screen extends StatefulWidget {
   const ST12Screen({super.key});

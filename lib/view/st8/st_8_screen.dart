@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:health_drug/res/comman/comman_text.dart';
-// import 'package:health_drug/res/constant/app_color.dart';
-// import 'package:health_drug/res/constant/app_images.dart';
 import 'package:healthproject/res/comman/comman_text.dart';
 import 'package:healthproject/res/constant/app_color.dart';
 import 'package:healthproject/res/constant/app_images.dart';

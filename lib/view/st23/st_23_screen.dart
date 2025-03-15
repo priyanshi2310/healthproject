@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:healthproject/res/comman/comman_text.dart';
 import 'package:healthproject/res/constant/app_color.dart';
 import 'package:healthproject/res/constant/app_images.dart';
-// import 'package:healthproject/st.dart';
+
 import 'package:healthproject/view/st24/st_24_screen.dart';
-// import 'package:healthproject/st24.dart';
 
 class ST23Screen extends StatefulWidget {
   const ST23Screen({super.key});
