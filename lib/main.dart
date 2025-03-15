@@ -17,6 +17,7 @@ import 'package:healthproject/view/st23/st_23_screen.dart';
 import 'package:healthproject/view/st24/st_24_screen.dart';
 import 'package:healthproject/view/st25/st_25_screen.dart';
 import 'package:healthproject/view/st28/st_28_screen.dart';
+import 'package:healthproject/view/st29/st_29_screen.dart';
 // import 'package:healthproject/view/st26.dart';
 
 // import 'package:healthproject/st24.dart';
@@ -69,7 +70,8 @@ class MyApp extends StatelessWidget {
         'STScreen': (context) => STScreen(),
         'ST24Screen': (context) => ST24Screen(),
         'ST25Screen': (context) => ST25Screen(),
-        'ST28Screen':(context)=>ST28Screen(),
+        'ST28Screen': (context) => ST28Screen(),
+        'ST29Screen': (context) => ST29Screen(),
       },
     );
   }

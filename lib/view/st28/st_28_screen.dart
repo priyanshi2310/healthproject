@@ -10,6 +10,13 @@ class ST28Screen extends StatefulWidget {
 }
 
 class _ST28ScreenState extends State<ST28Screen> {
+  // bool _isChecked = false;
+  // bool _isShakeChecked = false;
+  // bool _isRemoveCapChecked = false;
+  bool _isShakeChecked = false;
+  bool _isRemoveCapChecked = false;
+  bool _isConsultationChecked = false;
+  bool _isChecked = false;
   int selectedIndex = -1;
   List<String> images = [
     "images/Rectangle 199.png",
@@ -438,6 +445,273 @@ class _ST28ScreenState extends State<ST28Screen> {
                     fontWeight: FontWeight.w400,
                     color: AppColor.darkgrey,
                   ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  // Checkbox(
+                  //   value: _isChecked,
+                  //   onChanged: (bool? value) {
+                  //     setState(() {
+                  //       _isChecked = value!;
+                  //     });
+                  //   },
+                  //   activeColor: Color(0xff09B7A6),
+                  //   checkColor: Colors.white,
+                  // ),
+                  // Image.asset('images/Line 25.png'),
+                  // Checkbox(
+                  //   value: _isChecked,
+                  //   onChanged: (bool? value) {
+                  //     setState(() {
+                  //       _isChecked = value!;
+                  //     });
+                  //   },
+                  //   activeColor: Color(0xff09B7A6),
+                  //   checkColor: Colors.white,
+                  // ),
+                  // Image.asset('images/Line 25.png'),
+                  // Checkbox(
+                  //   value: _isChecked,
+                  //   onChanged: (bool? value) {
+                  //     setState(() {
+                  //       _isChecked = value!;
+                  //     });
+                  //   },
+                  //   activeColor: Color(0xff09B7A6),
+                  //   checkColor: Colors.white,
+                  // )
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Checkbox(
+                                value: _isShakeChecked,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isShakeChecked = value!;
+                                  });
+                                },
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                side: BorderSide(
+                                  color: Color(0xff09B7A6),
+                                ),
+                                activeColor: Color(0xff09B7A6),
+                                checkColor: Colors.white,
+                              ),
+                              VerticalDivider(
+                                color: Color(0xff09B7A6),
+                                thickness: 5,
+                              )
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CommanText(
+                                text: 'Shake before using it',
+                                weight: 16,
+                                fontWeight: FontWeight.w400,
+                                color: AppColor.purple,
+                              ),
+                              CommanText(
+                                text:
+                                    'There are many variations of passages of\nhave suffered alteration in some form',
+                                weight: 14,
+                                fontWeight: FontWeight.w400,
+                                color: AppColor.darkgrey,
+                              ),
+                            ],
+                          ),
+                          VerticalDivider(
+                            width: 20,
+                            color: Colors.grey,
+                            thickness: 1,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Checkbox(
+                                value: _isRemoveCapChecked,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isRemoveCapChecked = value!;
+                                  });
+                                },
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                side: BorderSide(
+                                  color: Color(0xff09B7A6),
+                                ),
+                                activeColor: Color(0xff09B7A6),
+                                checkColor: Colors.white,
+                              ),
+                              VerticalDivider(
+                                color: Color(0xff09B7A6),
+                                thickness: 5,
+                              )
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CommanText(
+                                text: 'Remove the cap',
+                                weight: 16,
+                                fontWeight: FontWeight.w400,
+                                color: AppColor.purple,
+                              ),
+                              CommanText(
+                                text:
+                                    'There are many variations of passages of\nhave suffered alteration in some form',
+                                weight: 14,
+                                fontWeight: FontWeight.w400,
+                                color: AppColor.darkgrey,
+                              ),
+                            ],
+                          ),
+                          VerticalDivider(
+                            width: 20,
+                            color: Colors.grey,
+                            thickness: 1,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Checkbox(
+                                value: _isChecked,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isChecked = value!;
+                                  });
+                                },
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                side: BorderSide(
+                                  color: Color(0xff09B7A6),
+                                ),
+                                activeColor: Color(0xff09B7A6),
+                                checkColor: Colors.white,
+                              ),
+                              VerticalDivider(
+                                color: Color(0xff09B7A6),
+                                thickness: 5,
+                              )
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CommanText(
+                                text: 'Eat it slowly',
+                                weight: 16,
+                                fontWeight: FontWeight.w400,
+                                color: AppColor.purple,
+                              ),
+                              CommanText(
+                                text:
+                                    'There are many variations of passages of\nhave suffered alteration in some form',
+                                weight: 14,
+                                fontWeight: FontWeight.w400,
+                                color: AppColor.darkgrey,
+                              ),
+                            ],
+                          ),
+                          VerticalDivider(
+                            width: 20,
+                            color: Colors.grey,
+                            thickness: 1,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+                        children: [
+                          Checkbox(
+                            value: _isConsultationChecked,
+                            onChanged: (bool? value) {
+                              setState(() {
+                                _isConsultationChecked = value!;
+                              });
+                            },
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            side: BorderSide(
+                              color: Color(0xff09B7A6),
+                            ),
+                            activeColor: Color(0xff09B7A6),
+                            checkColor: Colors.white,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CommanText(
+                                text: 'Consultation',
+                                weight: 16,
+                                fontWeight: FontWeight.w400,
+                                color: AppColor.purple,
+                              ),
+                              CommanText(
+                                text:
+                                    'There are many variations of passages of\nhave suffered alteration in some form',
+                                weight: 14,
+                                fontWeight: FontWeight.w400,
+                                color: AppColor.darkgrey,
+                              ),
+                            ],
+                          ),
+                          VerticalDivider(
+                            width: 20,
+                            color: Colors.grey,
+                            thickness: 1,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'ST29Screen');
+                    },
+                    child: Container(
+                      height: 59,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color(0xff09BFA7),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CommanText(
+                            text: 'Add to Cart',
+                            weight: 16,
+                            fontWeight: FontWeight.w400,
+                            color: AppColor.primaryColor,
+                          ),
+                          Icon(Icons.shopping_cart_outlined,
+                              color: AppColor.primaryColor)
+                        ],
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
